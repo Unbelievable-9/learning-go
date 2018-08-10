@@ -80,7 +80,7 @@ func main() {
 	findTheSmallest(x)
 }
 
-// totalAndAverage calculates the total and average of an array
+// totalAndAverage calculates the total and average of an slice
 func totalAndAverage(slice []int) {
 	total := 0
 	average := 0.0
