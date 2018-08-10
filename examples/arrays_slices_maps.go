@@ -97,6 +97,7 @@ func totalAndAverage(slice []int) {
 	fmt.Printf("Average of slice is: %.2f\n", average)
 }
 
+// findTheSmallest finds the smallest number in slice
 func findTheSmallest(slice []int) {
 	var smallest int
 
