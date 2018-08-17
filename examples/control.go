@@ -1,36 +1,6 @@
-package main
+package examples
 
 import "fmt"
-
-func main() {
-	// Times Table
-	printTimesTable()
-
-	fmt.Println()
-
-	// Have fun with 'switch'
-	fmt.Println("Input a number within 0-9")
-	var number int
-	fmt.Scanf("%d", &number)
-
-	word, status := numberToWord(number)
-
-	if status {
-		fmt.Printf("Number %d in English is: %s\n", number, word)
-	} else {
-		fmt.Println(word)
-	}
-
-	fmt.Println()
-
-	// Exercise 2
-	divisibelByThree()
-
-	fmt.Println()
-
-	// Exercise 3
-	fizzBuzz()
-}
 
 // printTimesTable just print a simple Times Table
 func printTimesTable() {
@@ -123,4 +93,35 @@ func fizzBuzz() {
 			fmt.Printf("%d ", i)
 		}
 	}
+}
+
+// ControlExample runs examples about control structures
+func ControlExample() {
+	// Times Table
+	printTimesTable()
+
+	fmt.Println()
+
+	// Have fun with 'switch'
+	fmt.Println("Input a number within 0-9")
+	var number int
+	fmt.Scanf("%d", &number)
+
+	word, status := numberToWord(number)
+
+	if status {
+		fmt.Printf("Number %d in English is: %s\n", number, word)
+	} else {
+		fmt.Println(word)
+	}
+
+	fmt.Println()
+
+	// Exercise 2
+	divisibelByThree()
+
+	fmt.Println()
+
+	// Exercise 3
+	fizzBuzz()
 }

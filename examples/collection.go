@@ -1,8 +1,43 @@
-package main
+package examples
 
 import "fmt"
 
-func main() {
+// totalAndAverage calculates the total and average of an slice
+func totalAndAverage(slice []int) {
+	total := 0
+	average := 0.0
+
+	// Underscore means 'ignore'
+	for _, value := range slice {
+		total += value
+	}
+
+	average = float64(float64(total) / float64(len(slice)))
+
+	fmt.Println(slice)
+	fmt.Printf("Total of slice is: %d\n", total)
+	fmt.Printf("Average of slice is: %.2f\n", average)
+}
+
+// findTheSmallest finds the smallest number in slice
+func findTheSmallest(slice []int) {
+	var smallest int
+
+	if len(slice) <= 0 {
+		smallest = -1
+	} else {
+		for index, value := range slice {
+			if index == 0 || value < smallest {
+				smallest = value
+			}
+		}
+	}
+
+	fmt.Printf("The smallest number in array is: %d\n", smallest)
+}
+
+// CollectionExample runs example about arrays, slices and maps
+func CollectionExample() {
 	// Total & Average
 	array := [5]int{
 		1,
@@ -78,38 +113,4 @@ func main() {
 	}
 
 	findTheSmallest(x)
-}
-
-// totalAndAverage calculates the total and average of an slice
-func totalAndAverage(slice []int) {
-	total := 0
-	average := 0.0
-
-	// Underscore means 'ignore'
-	for _, value := range slice {
-		total += value
-	}
-
-	average = float64(float64(total) / float64(len(slice)))
-
-	fmt.Println(slice)
-	fmt.Printf("Total of slice is: %d\n", total)
-	fmt.Printf("Average of slice is: %.2f\n", average)
-}
-
-// findTheSmallest finds the smallest number in slice
-func findTheSmallest(slice []int) {
-	var smallest int
-
-	if len(slice) <= 0 {
-		smallest = -1
-	} else {
-		for index, value := range slice {
-			if index == 0 || value < smallest {
-				smallest = value
-			}
-		}
-	}
-
-	fmt.Printf("The smallest number in array is: %d\n", smallest)
 }

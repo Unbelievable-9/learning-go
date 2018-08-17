@@ -1,4 +1,4 @@
-package main
+package examples
 
 import (
 	"fmt"
@@ -22,7 +22,22 @@ const (
 	k = "same.\n"
 )
 
-func main() {
+// fahrenheitToCelsius is for test
+func fahrenheitToCelsius(temp float64) float64 {
+	temp = math.Ceil(temp*100) / 100
+
+	return (temp - 32) * 5 / 9
+}
+
+// feetToMeter is for test
+func feetToMeter(feet float64) float64 {
+	feet = math.Ceil(feet*100) / 100
+
+	return feet * 0.3048
+}
+
+// VariableExample runs examples about variables
+func VariableExample() {
 	fmt.Println(a, b, c, d, e, f, g)
 	fmt.Println(h, i, j, k)
 
@@ -37,18 +52,4 @@ func main() {
 	fmt.Scanf("%f", &feet)
 
 	fmt.Printf("%.1f feet(s) is equal to %.2f meter(s)", feet, feetToMeter(feet))
-}
-
-// fahrenheitToCelsius is for test
-func fahrenheitToCelsius(temp float64) float64 {
-	temp = math.Ceil(temp*100) / 100
-
-	return (temp - 32) * 5 / 9
-}
-
-// feetToMeter is for test
-func feetToMeter(feet float64) float64 {
-	feet = math.Ceil(feet*100) / 100
-
-	return feet * 0.3048
 }
